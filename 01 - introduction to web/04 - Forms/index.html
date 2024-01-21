@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>HTML Forms</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+	<header>
+		<h1>HTML Forms</h1>
+	</header>
+	<main>
+		<article>
+			<dl>
+				<dt class="special-text--underline">Forms</dt>
+				<dd>
+					used for getting Data from users this's data are collected in <code>HTML</code> after sending this's
+					data into ther server
+				</dd>
+				<dt class="special-text--underline">form tags and attributes</dt>
+				<dd>
+					for creating form in html we should wraping our inputs and buttons inside this's tag, form tag
+					having attributes like: <br>
+					<code>&lt;form action="url for redirect after save" method="get || post"&gt; </code>: for creating
+					for and in this's attributes we will telling what we should do after submit <br>
+					<ol>
+						<li>action : the place where the page will redirected to aftere submit</li>
+						<li>method : we have two way to sending data with the form method
+							<ol>
+								<li>1- get: sending un secure data, in this's method the data wills ending in the url
+								</li>
+								<li>1- post: sending secure data, in this's method the data will sending data in hidden
+									way and this's method will sending data to the server through the request who is
+									sended into the server.</li>
+							</ol>
+						</li>
+					</ol>
+					<code>&lt;input name="field name" type="text"&gt;</code> <br>
+					<code>&lt;input name="field name" type="text"&gt;</code> <br>
+					<code>&lt;label for="input-id"&gt; </code> : worked as a wrpper for the input or the text which
+					denoted the input, the fture for using this's tag whn clicking on this's tag will focus his input
+					which is related with his id
+					<br>
+					<code>&lt;input type="hidden"&gt;</code> : used to making hidden input, this's tag are the best
+					choice to sending data the programer who will write it by js or making fixed data to send it
+					<br>
+					<code>&lt;input type="password"&gt;</code> : used to making password input, this's tag are the best
+					choice to getting secure data.
+					<br>
+					<code>&lt;textarea name="message" <br>
+						id="message" cols="number of columns" <br> 
+						rows="number of rows"&gt; <br>
+						&lt;/textarea&gt; </code> <br>
+					used to getting message from the user used to geeting feedback or message from the user in most
+					time.
+					<br>
+					<code>&lt;input value="Submit" type="submit"&gt;</code>: For Submiting Data
+					<br>
+					<code>&lt;input value="Cancel" type="reset"&gt;</code>: FOr Reset All Fields inside Form.
+					<br>
+					<code>&lt;input type="file"&gt;</code> : For uploading file.
+					<code>&lt;fieldset&gt;</code> : Making Layout with border and address.
+					<code>&lt;legend&gt;</code> : Adding Address into the border and address.
+					<code>&lt;input type="file"&gt;</code> : For uploading file.
+					<code>&lt;inpur type="naumber"&gt;</code> : making input as a number.
+					<code>&lt;input type="email"&gt;</code> : For making input as email and validate this's field on submit.
+					<code>&lt;input type="date"&gt;</code> : For making input as date.
+					<code>&lt;input type="range"&gt;</code> : For making input as range for making progress bar.
+
+					<hr>
+					<h4 class="special-text--underline">attributes for the form elements</h4>
+					<code>size=""</code>: width of the input (number of pixels will dispalyed)
+					<br>
+					<code>maxlength=""</code>: number of character of he input will be accepted as a number
+					<br>
+					<code>multiple</code>: to select more than one choise
+					<br>
+
+					<code>value=""</code>: adding value to the input field" but in html5 the best solution is using
+					placeholder with the input (placeholder will be hidden when adding Value into the field) <br>
+					<code>selected</code>: making this's filed Selected <br>
+					<code>checked</code>: making this's filed checked
+					<code>tabindex="number"</code>: change the arrangement of the tab when clicking.
+					<code>acceskey="char"</code>: when user using <code>alt + shift + char</code> the field will be
+					<code>min="number"</code>: adding minimum number.<br>
+					<code>min="max"</code>: adding maximum number. <br>
+					<code>required</code>: for making this's field important and should having a value.
+					<code>pattern</code> : taking an regular expression to validate the field when Submiting the form. <br>
+					<code>autocomplete="on | off"</code> : making suggestion of data which matching form name on or off as setting.
+				</dd>
+			</dl>
+			<br>
+			<fieldset class="form-container">
+				<legend>Task To Compare Form Methods</legend>
+				<div class="method-get">
+					<h3>Form with action="./submit.html" and mehtod ="GET" </h3>
+					<form action="./submit.html" method="get">
+						<label for="fullname-1">Full Name: <br>
+							<input type="text" name="fullname-1" id="register-fullname-1" required title="your name must be at least 3 letters" pattern="[A-Za-z]{3,}">
+						</label>
+						<br>
+						<label for="age-1">
+							Age: <br>
+							<input type="text" name="age-1" id="age-1">
+						</label>
+						<br>
+						<label for="password-1">Password: <br>
+							<input type="password" name="password-1" id="password-1">
+						</label>						
+						<br>
+						<label for="password-1">Email: <br>
+							<input type="email" autocomplete="off" name="email-1" id="email-1">
+						</label>
+						<br>
+						<label for="dob-1">Date Of Birth: <br>
+							<input type="date" name="dob-1" id="dob-1">
+						</label>
+						<br>
+						<label for="gender-1">
+							Gender
+							<div class="flex">
+								<label for="male-1">
+									<input type="radio" name="gender-1" id="male-1" value="male"> male
+								</label>
+								<label for="female-1">
+									<input type="radio" name="gender-1" id="female-1" value="female"> female
+								</label>
+							</div>
+						</label>
+						<br>
+						<label for="study-level-1">Study Level
+							<select id="study-level-1">
+								<option value="student" selected>Student</option>
+								<option value="garduated">Garduated</option>
+								<option value="other">Other</option>
+							</select>
+						</label>
+						
+						<br>
+						<label for="skills-1">
+							Skills <br>
+							<label for="html-1">
+								<input type="checkbox" name="skills-1" id="html-1" value="html" checked> HTML
+							</label>
+							<label for="css-1">
+								<input type="checkbox" name="skills-1" id="css-1" value="css" checked> CSS
+							</label>
+							<label for="js-1">
+								<input type="checkbox" name="skills-1" id="js-1" value="js"> javascript
+							</label>
+						</label>
+						<br>
+						<textarea name="message-1" id="message-1" cols="30" rows="10">Enter Your Message Here.....</textarea>
+						<br>
+						<label for="file-1">Adding Files: <br>
+							<input type="file" name="file-1" id="file-1">
+						</label>
+						<small>
+							<input accesskey="r" type="checkbox" name="accept-conditon" id="accept-conditon"> I accept
+							the terms and conditions <br>
+							Press <code>alt + shift + r </code> to accept.
+						</small>
+						<input type="submit" value="Submit">
+						<input type="reset" value="Cancel">
+					</form>
+				</div>
+
+				<div class="method-post">
+					<h3>Form with action="./submit.html" and mehtod="POST" </h3>
+					<form action="./submit.html" method="post">
+						<label for="fullname">Full Name: <br>
+							<input type="text" name="fullname" id="register-fullname">
+						</label>
+						<br>
+						<label for="age">
+							Age: <br>
+							<input type="text" name="age" id="age">
+						</label>
+						<br>
+						<label for="password">Password: <br>
+							<input type="password" name="password" id="password">
+						</label>
+						<br>
+						<label for="email">Email: <br>
+							<input type="email" name="email" id="email">
+						</label>
+						<br>
+						<label for="dob">Date Of Birth: <br>
+							<input type="date" name="dob" id="dob">
+						</label>
+						<br>
+						<label for="gender">
+							Gender
+							<div class="flex">
+								<label for="male">
+									<input type="radio" name="gender" id="male" value="male"> male
+								</label>
+								<label for="female">
+									<input type="radio" name="gender" id="female" value="female"> female
+								</label>
+							</div>
+						</label>
+						<br>
+						<label>Study Level</label>
+						<select id="study-level">
+							<option value="student">Student</option>
+							<option value="garduated" selected>Garduated</option>
+							<option value="other">Other</option>
+						</select>
+						<br>
+						<label for="skills">
+							Skills <br>
+							<label for="html">
+								<input type="checkbox" name="skills" id="html" value="html" checked> HTML
+							</label>
+							<label for="css">
+								<input type="checkbox" name="skills" id="css" value="css" checked> CSS
+							</label>
+							<label for="js">
+								<input type="checkbox" name="skills" id="js" value="js" checked> javascript
+							</label>
+						</label>
+						<br>
+						<textarea name="message" id="message" cols="30" rows="10">Enter Your Message Here.....</textarea>
+						<br>
+						<label for="file">Adding Files: <br>
+							<input type="file" name="file" id="file">
+						</label>
+						<small>
+							<input accesskey="a" type="checkbox" name="accept-conditon" id="accept-conditon"> I accept
+							the terms and conditions <br>
+							Press <code>alt + shift + a </code> to accept.
+						</small>
+						<input type="submit" value="Submit">
+						<input type="reset" value="Cancel">
+					</form>
+				</div>
+			</fieldset>
+		</article>
+		<hr>
+		<h2>Video & Audio</h2>
+	</main>
+</body>
+
+</html>

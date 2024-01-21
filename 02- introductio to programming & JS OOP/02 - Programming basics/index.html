@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programminig Basics</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <article>
+        <h1>Programming Basics</h1>
+
+        <dl>
+            <dt>variable</dt>
+            <dd>denoted on a place in the memory this's place holding temporary and specific data, every variable having
+                [name, type, scope, lifetime].
+                <br>
+                <h2> naming variable</h2>
+                <ul>
+                    <li>starts with [letter, unerscore, dollar sign]</li>
+                    <li>allowed characters : [letter, unerscore, dollar sign, number]</li>
+                    <li>reserved key woard not allowed</li>
+                    <li>javscript case sensetive [APPLE != apple != AppLe]</li>
+                    <li>writing descriptive name for the variable as possible (always write clean code)</li>
+                </ul>
+                <h2>naming convention</h2>
+                <ul>
+                    <li><span class="colored">bascal notation [Used in Classes Name]:</span> when writing name contain
+                        more than word wite the first letter as capital letter [BascalNotaion]</li>
+                    <li><span class="colored">camelcase notation [Used in Variables Name]:</span> when writing name
+                        contain more than word wite the first word in lowecase then wite first letter of the words as a
+                        capital [camelCaseNotion]</li>
+                </ul>
+                <h2>programming languages in writting Variables</h2>
+                <ul>
+                    <li><span class="colored">typed (strong typed) language:</span> the variale type should be added
+                        when declare variable like [c, java, c++, python]</li>
+                    <li><span class="colored">untyped (loose typed) language:</span> the variale just take the name when
+                        declare variable and the type will denoted when adding a value like [javascript]</li>
+                </ul>
+                <h2>variable scope and life time</h2>
+                <ul>
+                    <li><span class="colored">global scope :</span> will be avilable in all parts of the page and his
+                        life time will be the life time of the page.</li>
+                    <li><span class="colored">local scope :</span> will be avilable in all parts inside his parent scope
+                        and his life time will be the life time of the parent.</li>
+                </ul>
+            </dd>
+            <dt>javascript data type</dt>
+            <dd>
+                javascript like all other progrming language having a data type, and javscript data type is:
+                <ul>
+                    <li>string</li>
+                    <li>numeric</li>
+                    <li>boolean</li>
+                    <li>null</li>
+                    <li>undefied</li>
+                    <li>object</li>
+                </ul>
+            </dd>
+
+            <dt>javascript Hoisting</dt>
+            <dd>
+                this's means when js starts running the code line by line the interpreter will takes all variables and
+                declare them , and after declre all varibels as undefiend then start runing the code.
+                <br>
+                <pre>
+Example:
+case - 1
+
+console.log(a); <code>//undefiend</code>
+<code>var a;</code> 
+<code>a</code> = "data";
+
+
+case - 2
+
+<code>b</code> = "data"; 
+console.log(b) <code>//data</code>                
+<code>var b;</code> 
+</pre>
+            </dd>
+
+            <dt>let & const</dt>
+            <dd>
+                - when working with loops and decalre counter with <code>var</code> keyword this's will making the
+                counter global in all page, this's means more space of memory, so that in <code>ES6</code>
+                <code>let</code> and <code>const</code> are added, and there are more specific than <code>var</code> and
+                ther are not hoisted
+                - <code>const</code> :like let in every thing but <code>const</code> means the will take fixed value and
+                this's value can't changed.
+            </dd>
+
+            <dt class="notes-header">Additional Notes</dt>
+            <dd class="notes">
+                <div class="note-content">
+                    <h2>functions</h2>
+                    <div>
+                        <p>is a part of coe with a special name, this's part will be run when clling this function name,
+                            <br>
+                            every function having [function key woard , function name + brackets, function body]. <br>
+                            <code>function</code> like <code>var</code> in Hoisting, and the same rules in adding name
+                            but it's good to mking function name start with verb
+                        </p>
+                        <h4>Example: </h4>
+                        <pre><code> function</code> printHello() {
+    console.log("hello world !");
+}
+                </pre>
+                        Function taking a paramters in declaration , this's paramters in calling will called an
+                        arguments, also function return a result and any thig will written after <code>return</code>
+                        will ignore becouse the function ended when the interpreter arrived to <code>retuen</code> <br>
+                        <h4>Example: </h4>
+                        <pre><code>function</code> addingTwoNumbers(number1, number2) {
+    <code>let sum</code> = <code>number1</code> + <code>number2</code>; 
+    <code>return</code> `the summition of adding <code>${number1}</code> + <code>${number2}</code> is : <code>${sum}</code>`;
+}
+                </pre>
+                        <h2>recursion function</h2>
+                        <div>
+                            <p>
+                                this's term used to denoted on a function will calling itself with a conditon if the
+                                conditon is trure the function will stop clling itself the main part of recursion is the
+                                condition you should know when you will stop calling this's function or you will taking
+                                your code into infinite loop<br>
+                            <pre>Example
+<code>function</code> countDown(countNumber) {
+    console<code>.</code>log(countNumber)<code>;</code>
+    <code>if</code>(countNumber > 0) {
+        countDown(countNumber - 1)
+    }
+}
+//calling countDown with argument = 3, countDown output 3,  2,  1,  0.
+                        </pre>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="note-content">
+                        <h2>using variable without making declaration in js </h2>
+                        <div>
+                            <p>one of js problem is making variable without name in js tihs's will working and getting
+                                value and to prevent this's problem we use 'use strict' in js file linking </p>
+
+                            <h4>Example: </h4>
+                            <pre>after adding 'use strict'
+<code>x = 200; </code>
+console.log(x); <code>// will output 200 </code>
+
+before using 'use strict'
+<code>x = 200; </code>
+console.log(x); <code>// will output error </code>
+
+                    </pre>
+                        </div>
+                    </div>
+            </dd>
+        </dl>
+    </article>
+    <script src="./script.js"></script>
+</body>
+
+</html>

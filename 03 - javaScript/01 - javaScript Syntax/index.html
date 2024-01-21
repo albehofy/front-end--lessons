@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Syntax</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <article>
+        <h1>javaScript Builtin Objects</h1>
+        <ol>
+            <li><code>String</code></li>
+            <li><code>Number</code></li>
+            <li><code>Array</code></li>
+            <li><code>Date</code></li>
+            <li><code>Math</code></li>
+        </ol>
+        <dl>
+            <dt>String Object</dt>
+            <dd>
+                <h4>methods of String object</h4>
+                <ul>
+                    <li><code>charAt</code>: return the character inde in string</li>
+                    <li><code>indexOf</code>: return index of character</li>
+                    <li><code>lastIndexOf</code>: return the last place of the chracter index of character</li>
+                    <li><code>subString(start,end)</code>: return the letters fromthe start to the end if the end </li>
+                    <li><code>concat(string)</code>: add new string to the old string and the feature of using concat is adding space before a string</li>
+                </ul>
+            </dd>
+            <dt>Number Object</dt>
+            <dd>
+                <h4>methods of Number object</h4>
+                <ul>
+                    <li><code>MAX_VALUE</code>: return constant value (maimum allowed number)</li>
+                    <li><code>MIN_VALUE</code>: return the smallest number you can work with in js</li>
+                    <li><code>NaN</code>: contains not a number number</li>
+                    <li><code>POSITIVE_INFINITY</code>: contains the inifinty numbers "read only" </li>
+                    <li><code>NEGATIVE_INFINITY</code>: has the value  infinity </li>
+                    <li><code>toFixed(n)</code> return n of numbers after the the (.) sign like 2.foxed(6) = 2.000000 </li>
+                    <li><code>toPrecision(n)</code> format any numbers with length of n 2.303.toExponential(6) = 2.30300 </li>
+                    <li><code>toExponential()</code> Exponential notation of the number object as a string, rounds the returnde value, 56789.toExponential(2) = 5.68e+4 </li>
+                    <li><code>toString()</code> converts from decimal system to any other system when passing it's base as a parameter, or converting nmber into a string when thi's method with no params </li>
+                </ul>
+            </dd>
+            <dt>Math Object</dt>
+            <dd>
+                <h4>methods of Math object(Static class)</h4>
+                <ul>
+                    <li><code>random()</code> retuen random number from 0 to 10 </li>
+                    <li><code>round()</code> return integer number after rounded the number for the nearest decimal number</li>
+                    <li><code>floar()</code>return decimal number after rounded the number for the lower number</li>
+                </ul>
+            </dd>
+            <dt>Boolean Object</dt>
+            <dd>
+                <h4>methods of Boolean object</h4>
+                <ul>
+                    <li><code>new Boolean(x)</code> return false if x is "'', 0, null, false, NaN,empty" and will return true other wise </li>                </ul>
+            </dd>
+            <dt>Date Object</dt>
+            <dd>
+                <ul>
+                    <li><code>new Date()</code> new date of the my pc date </li>                
+                    <li><code>new Date("date ad a string")</code> new date frim the string attr</li>                
+                    <li><code>new Date(year, month, day, hours, minutes, seconds, milliseconds)</code> new date frim the string attr</li>                
+                </ul>
+                <h4>methods of Date object</h4>
+                <li><code>getDate()</code>erturn  day of the month </li>                
+                <li><code>getMonth()</code> return month </li>                
+                <li><code>getDay()</code> return day (sunday = 0)</li>                
+                <li><code>getHours()</code> return hours </li>                
+                <li><code>getMinutes()</code> return minutes </li>                
+                <li><code>getSeconds()</code> return seconds</li>                
+                <li><code>getTime()</code> return time</li>                
+                <li><code>toUTCString()</code> return Date as a string</li>                
+                <li><code>toLocalString()</code> return full Date as a string by defualt of your PC</li>                
+                <li><code>toLocalDateString()</code> return  Date(yy-mm-dd) as a string by defualt of your PC</li>                
+            </dd>
+            
+            <dt>Array Object</dt>
+            <dd>
+                <h4>property of Array object</h4>
+                <ul>
+                    <li><code>length</code> return width of array</li>             
+                </ul>
+                
+                <h4>Methods of Array object</h4>
+                <ul>
+                    <li><code>concat(array)</code> return string of array1 + array2 </li>             
+                    <li><code>join(array)</code> return string of array1 + array2 sepertaed by a comma </li>             
+                    <li><code>reverse()</code> return all elements of arraya as reversed elements </li>             
+                    <li><code>push(element)</code> add element to the end of the array return length od the array</li>             
+                    <li><code>unshift(element)</code> add element to the begining of the array return length od the array</li>             
+                    <li><code>pop()</code> remove the last element of the array and return the removed element</li>             
+                    <li><code>shift(element)</code> remove the first element of the array and return the removed element</li>             
+                    <li><code>slice(index)</code> return all item of the array from index to the length of the array</li>             
+                    <li><code>sort()</code>sort array elements as a alphapetic == arrange the elements depends on the ascii code.</li>             
+                </ul>
+            </dd>
+        </dl>
+        <p class="note">we can used the "string value as an indx of the elements in the array" like let arr1 = []; <br>arr1["mohamed"]= 7000; <br>
+            arr1["john"]= 6500; 
+            <br>er can loop through this type of arrays by (for ... in ..)
+        </p>
+    </article>
+    <script src="./script.js"></script>
+</body>
+</html>

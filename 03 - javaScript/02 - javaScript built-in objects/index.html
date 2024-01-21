@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Syntax</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <article>
+        <h1>javaScript Builtin Functions</h1>
+        <dl>
+            <dt>Dialog Boxes</dt>
+            <dd>
+                <ul>
+                    <li><code>alert</code>: showing essgae for the user and will stop the page loading and will working after user making a decesion with this's alert</li>
+                    <li><code>prompt</code>: like alert in showing messgae for the user and also will stop loading of the page and will working after user making a decesion too but the diffrence in this's methdo prompt taking a value as a question and asking user to input answer.</li>
+                    <li><code>confirm</code>: like prompt but in this's way asking user for a true or false answer if okay this's means true else means flase</li>
+                </ul>
+            </dd>
+            <dt>Builtin Functions</dt>
+            <dd>
+                <ul>
+                    <li>parseInt(): convirting Number Into integer Value <br>
+                        <b>Example</b>
+                        parseInt("3a"); //3
+                        parseInt("a3"); //NaN
+                    </li>
+                    <li>parseFloat(): Convirsting Value into Decimal Value <br>
+                        <b>Example</b>
+                        parseFloat("3.55a"); //3.55
+                        parseInt("a3.55"); //NaN
+                    </li>
+                    <li>number(): converting Value into a number and will return NaN if it's founded string in the Value <br>
+                        <b>Example</b>
+                        number(false);    //0
+                        number("767");   //767
+                        number("3 23"); //NaN
+                    </li>
+                    <li>string(): convirting value into string value <br>
+                        string(01092232) // "01092232"
+                    </li>
+                </ul>
+            </dd>
+            <dt>Functions For Checking</dt>
+            <dd>
+                <ul>
+                    <li>isFinite(number): checking if the value is number or not if the value is a number in this's case the function will return true <br>
+                    <b>Example</b>
+                    isInfinite(120) // true
+                    isInfinite("120") // false
+                    isInfinite("asd") // false
+                </li>
+                <li>inNan(value): checking if the value is not a number  if the value is a number in this's case will return flase <br>
+                    <b>Example</b>
+                    isInfinite(120) // false
+                    isInfinite("120") // true
+                    isInfinite("asd") // true
+                </li>
+                <li>eval(expresion) : in this case eval function will taking the expression and converting into a code and return  the result of the expression.</li>
+                </ul>
+            </dd>
+            <dt>Errors in javaScript</dt>
+            <dd>
+                for showing error looking t the console
+                <ul>
+                    <li>Syntax Error: the page will stop working becouse we having a error in writing the syntax</li>
+                    <li>Html Error: error in writing html tags</li>
+                    <li>runtime Error: page will still working but and the code is working in good way but we will getting an error from the user input, we can solve this's error by making validat on the input which will coming from the user.</li>
+                    <li>logical error: this's is defficult type of errors,becouse the error in this's case in the logic of how to handling data and we having un expected result, <br> for solving the problem with the logicl error we using debug for start debug going to debugger in dev tools or writting <code>debugger</code> in avaScript file, debug will helping to showing code line by line and this's making it's easy to finding erors </li>
+                </ul>
+            </dd>
+            <dt>testing Functions</dt>
+            <dd>
+                console: for logging data console like lert but console dont  stop working of the page.
+            </dd>
+
+        </dl>
+    </article>
+    <script src="./script.js"></script>
+</body>
+</html>

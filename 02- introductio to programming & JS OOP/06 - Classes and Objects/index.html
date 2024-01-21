@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes and Objects</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <article>
+        <h1>Classes and Objects</h1>
+        <dl>
+            <dt>what's the differences between <code>classes</code> and <code>objects</code></dt>
+            <dd>the <code>class</code> is the template or the blue print whuch the <code>object</code> created from,
+                also we can say the <code>object</code> is the instance of the <code>class</code>.
+                <h2>class</h2>
+                is the blueprint or template from which objects are created , also class is a group of similar objects,
+                denoted on logical entity, and doesn't allocated meory when it is created, and created for one time.
+                <h2>object</h2>
+                is an instance of the <code>class</code>, real world entity, (physicl entity) this's means every things
+                you can touch is an <code>object</code>, also every <code>object</code> should created from a
+                <code>class</code>, <code>objects</code> will having a different in the <code>properites</code> but
+                having the same
+                <code>methods, <code>object is allocated memmory when it's created, created many times as per requierment</code></code>
+                <h2>ways of creating object of class</h2>
+                <ul>
+                    <li>Implicit object creation: <code>var</code> str = "new string in implicit object creation"; <br>
+                        we called the creation in this's as a value type for the value (typeof this creation = type of
+                        value), <br>
+                        this's case working with the stack (first input will be the last ouput) we working with the
+                        values.
+                    </li>
+                    <li>Explicit object creation: <code>var</code> str = <code>new</code> <code>String</code>("new
+                        String in Explicit object creation"); <br>
+                        we called the creation in this's as a reference type for the value (typeof this creation =
+                        object becouse it's pointer on the reference in the memory)<br>
+                        this's case working with the Heap (the way off arranged item is different about the stack) so
+                        that we used the stack to taking the address of the data in the heap, and we accessed the
+                        objects nd data in the heap by the addreess wich is in the stack, we used this's type of
+                        creaction when we needed the value wtill updated with the value of the related address all the
+                        time.
+                    </li>
+                </ul>
+                the difference between implicit and Explicit ?
+                - implicit is value type value.
+                <pre>Example 
+    <code>var</code> str = "hello, mr: Mohamed" <code>;</code>
+    <code>console.log</code>(<code>typeof</code>(<code>str</code>)) <code>;</code> // string
+                </pre>
+                - explicit is reference type value
+                <pre>Example 
+    <code>var</code> strObject = <code>new</code> <code>String</code>("hello, mr: Mohamed")<code>;</code>
+    <code>console.log</code>(<code>typeof</code>(<code>strObject</code>)) <code>;</code> // object
+                </pre>
+                for changing the value in the reference type (<code>String</code>) we used <code>method</code> called
+                <code>valueOf</code>, becouse if we used equall sign (=) to change the value this will change the type
+                into a permative type.
+            </dd>
+
+            <dt>How to writing class in javascript</dt>
+            <dd>classes in javascript writing in pascale notation <br>
+                <pre>Example
+    <code>class</code> Employee {
+        <!-- member variables (properites) -->
+        ID; 
+        name;
+        age = 18;
+
+        <!-- member methods -->
+        showEmployee() {
+            <!-- console.log("Employee Name" + this.name + "and his age is " + this.age) -->
+        }
+        saveEmployee() {
+            console.log("Employee saved !")
+        }
+    }
+    <!-- intialization -->
+    <code>var</code> emp1 = <code>new</code> Employee();
+    // <!-- intialization -->
+    emp1.ID = 1; 
+    emp1.name = "Mohamed"; 
+    emp1.age = 24; 
+    emp1.<code>saveEmployee</code>(); 
+    emp1.<code>showEmployee</code>();
+    <code>var</code> emp2 = <code>new</code> Employee();
+    // <!-- intialization -->
+    emp1.ID = 2; 
+    emp1.name = "john"; 
+    emp1.age = 24; 
+    emp2.<code>saveEmployee</code>(); 
+    emp2.<code>showEmployee</code>();
+                </pre>
+            </dd>
+
+            <dt>access modifire</dt>
+            <dd>we having 3 type of modifires, this's are used in <code>es7+</code>
+                <ul>
+                    <li>public: this's means thie class modifire can be accessed out of the class</li>
+                    <li>private: for adding <code>private</code> modifire should adding <code>#</code> before the name
+                        of this's modifire, and for working with the private member we adding <code>set</code> method,
+                        and <code>get</code> method. <b>for Example</b> <code>#ID = 20329</code> this's means the class
+                        modifire
+                        can be accessed inside the class only, and the class
+                        whose inherite from this's class can't access this's modifires</li>
+                    <li>protected (<code>not supported in javaScript</code>): like private cant be shown out side the
+                        class, and the class whose inherite from
+                        this's class can access this's modifires</li>
+                </ul>
+                <pre>Example Of Adding Private Modifire Into The Class
+    <code>class</code> Employee {
+        <!-- member variables (properites) -->
+        #ID; <code>private</code> ID 
+        name;
+        age = 18;
+
+        <!-- member methods -->
+        <code>setID</code>(id){
+            <code>this</code>.#ID = id; 
+        }
+        
+        <code>getID</code>() {
+            return <code>this</code>.#ID;
+        }
+
+        <code>showEmployee</code>() {
+            console.log("Employee Name" + 
+            <code>this</code>.name + 
+            "and his age is " + 
+            <code>this</code>.age)<code>;</code>
+        }
+        <code>saveEmployee</code>() {
+            console.log("Employee saved !")
+        }
+    }
+    <!-- intialization -->
+    <code>var</code> emp1 = <code>new</code> Employee();
+    // <!-- intialization -->
+    emp1.ID = 1; 
+    // in this's case we adding new properity called id,
+     this's id is not the same of the private id in the class.
+    emp1.<code>setID</code>(1); 
+    //in this's case we accessed the private member which called <code>ID</code>
+    emp1.name = "Mohamed";
+    emp1.age = 24; 
+    emp1.<code>saveEmployee</code>(); 
+    emp1.<code>showEmployee</code>(); 
+</pre>
+            </dd>
+
+            <dt>constructor</dt>
+            <dd>is a special function in javaScript will excuting automatically when adding new object of the class to
+                making intialization of this's class <br>
+                for making constructor javaScript provided keywod called <code>constructor</code>, and we can adding
+                parameter for the constructor.
+                <pre>Example
+    class Person {
+        #ID = 0;
+        <code>constructor</code>(name= "person", hairColor ='black', eyeColor ="black", skinColor ="white") {
+            <code>this</code>.name = name; 
+            <code>this</code>.hairColor = hairColor; 
+            <code>this</code>.eyeColor = eyeColor; 
+            <code>this</code>.skinColor = skinColor;  
+        }
+        <code>approvedData</code>() {
+            console.log("your data saved iin successful way !");
+            <code>this</code>.#ID++; 
+        }
+        <code>gettingPersonData</code>() {
+            console.log(`id: ${<code>this</code>.#ID},
+            name: ${<code>this</code>.name}, 
+            hair color: ${<code>this</code>.hairColor}, 
+            eye color: ${<code>this</code>.eyeColor}, 
+            skin color: ${<code>this</code>.skinColor}`)
+        }
+    }
+    
+    <code>var</code> mohamed = <code>new</code> Person("mohamed", "black", "green", "white");
+    mohamed.<code>approvedData</code>(); 
+    mohamed.<code>gettingPersonData</code>(); 
+    <code>var</code> shimaa = <code>new</code> Person("shimaa", "black", "black", "white");
+    shimaa.<code>approvedData</code>(); // note ID value  will statr from 0 again with every object.
+    shimaa.<code>gettingPersonData</code>(); 
+                </pre>
+                <h2>membres vs static</h2>
+                <b>Mebmer variables and Member Methods</b>
+                <ol>
+                    <li> belong to each object of the class (their values changes for each member).</li>
+                    <li> must be only called using an object form class.</li>
+                </ol>
+                <b>Static variables and Static Methods</b>
+                for using static we adding <code>static</code> keyword before the prt of code which we want to make
+                static
+                <ol>
+                    <li> belong to all class members (Have The Same Value For Each Object).</li>
+                    <li> called using the class itself.</li>
+                    <pre>Example
+    class<code>Point3D</code> {
+        <code>constructor</code> (x, y, z) {
+            <code>this</code>.x = x; 
+            <code>this</code>.y = y; 
+            <code>this</code>.z = z; 
+        }
+
+        <code>printPoints</code>(){
+            console.log(<code>this</code>.x, <code>this</code>.y, <code>this</code>.z)<code>;</code>
+
+        }
+        static calculatDistance(p1,p1){
+            <code>var</code> xDistance = <code>Math</code>.pow((p2.x - p1.x))<code>;</code>
+            <code>var</code> yDistance = <code>Math</code>.pow((p2.y - p1.y))<code>;</code>
+            <code>var</code> zDistance = <code>Math</code>.pow((p2.z - p1.z))<code>;</code>
+
+            <code>var</code> dist = <code>Math</code>.sqrt(xDistance + yDistance + zDistance)<code>;</code>
+
+            <code>return</code> dist <code>;</code>
+
+            <!-- intialization -->
+            <code>var</code> firstPoint = <code>new</code> Point3D(10,10,10)<code>;</code>
+            <code>var</code> firstPoint = <code>new</code> Point3D(10,10,10)<code>;</code>
+            
+            <code>var</code> secondPoint = Point3D.<code>calculatDistance</code>(firstPoint, secondPoint);
+        }
+    }
+                    </pre>
+                </ol>
+                <h2>super()</h2>
+                <p>when creating inheritance the <code>constructor</code> of the parent <code>class</code> are excuted
+                    then excute the <code>constructor</code> of the child (this's running automatically) but in js
+                    this's thing should handled by the developer so that we writing <code>super()</code> to excuting
+                    patrent <code>constructor</code> <br>
+                    when runing <code>super()</code> the value of the <code>parameter</code> of <code>constructor</code>
+                    will be <code>undefined</code> but we can solve this's problem by adding the <code>value</code> of
+                    the <b>child constructor</b> in the <code>super</code> lkie that <code>super(width, height)</code>
+                    <br>
+                    aslo we can used <code>super()</code> inside child <code>method</code> to excuting the
+                    <code>method</code> of the parent after overriding this's <code>method</code>
+                <pre>Example
+    draw(){
+        <code>super</code>.draw(); 
+        console.log("overriding draw with new value");
+    }
+                    </pre>
+                </p>
+                - also we can added new method inside the child class. 
+            </dd>
+
+            <dt>Relation Between Classes</dt>
+            <dd>
+                all relation rounded about the members of <code>class</code> is an <code>object</code> of other
+                <code>class</code>.
+                <ul>
+                    <li>association: the <code>class</code> having less dependent of the <code>object</code> which is
+                        comming from another <code>classclass</code> and if this's <code>object deleted</code> this's
+                        will not making a big different in this's <code>class</code> (optional info), like if we having
+                        student <code>class</code> and this's <code>class</code> contain <code>object</code> called
+                        department coming from another <code>class</code> this's department is an optional data in class
+                        student in this's case (student aggregate department).</li>
+                    <li>aggregation: this's <code>class</code> are contains some of <code>objects</code> making this's
+                        <code>class</code> like a zoo having a group of animals, this's means
+                        <code>zoo aggreated of animals</code> (special type of the association), but if i delete one of
+                        objects this's means the <code>class</code> will still working.</li>
+                    <li>composition: special type of aggregation, this's <code>class</code> contains <code>object</code>
+                        like aggregation but this's means this's object are main points in the <code>class</code> and if
+                        any <code>object</code> are deleted this's means the <code>class</code> will stop working </li>
+                    <li>inheritance: when i having a class inherite some <code>properites</code> or <code>methods</code>
+                        from other <code>class</code> and also the child <code>class</code> having it's own
+                        <code>properites</code> and <code>methods</code> <b>for Example</b> we having two classes A, and
+                        B : class B having some <code>properites</code> and <code>methods</code> of a this's done using
+                        <code>extends</code> keyword, <b>for explanation</b> a class B has an is a relationship with
+                        <code>class</code> A when B <code>extends</code> A this's relation called inheritance, and
+                        this's makes cod more reuse.</li>
+                </ul>
+            </dd>
+
+            <dt>continue with Classes</dt>
+            <dd>
+                <h2>overloading</h2>  
+                this's means we having method with the same name and with different params or with different types but overloading is not supported in js.
+                <pre>Example
+    //used when no params sent to function
+    sum() {
+        <code>return</code> "no params founded"
+    }
+    //used when 2 params sent to function
+    sum(a,b) {
+        <code>retuen</code> (a + b );
+    }
+    //used when 2 params sent to function
+    sum(a,b,c) {
+        <code>return</code> (a + b + c); 
+    }
+    // overloading is not supported in js but we can work around, 
+    like using conditions for chech params
+    sum(a, b, c) {
+        if( a=undefined || b == undefined ) {
+            <code>throw</code> new <code>Error</code>("function accepts 2 or 3 params")
+        }else if(c == undefined ) {
+            <code>return</code> (a + b);
+        } 
+        <code>return</code> (a + b + c);
+    } 
+                </pre>
+
+                <h2>setter & getter</h2>
+                <div>
+                    <p>setter and getter are used in es6+ for makiing handling the private modifire more, we used <code>get</code> for gteeing private value, and using <code>set</code>for ading value into the private modifire/p>
+                </div>
+            </dd>
+            
+            <div class="notes-header">
+                <h2>Addetional Notes</h2>
+                <div class="notes">
+                    - in js class starts with uppercase letter, object start with lowercase letter.
+                    <br>
+                    - when ther's addresses pointering thing in the heap this's thing will be removed from the heap.
+                    <br>
+                    - in the begining of js <code>object</code> called object based, and his object called custom
+                        object
+                        not class but all this's changed in es6+ and class are added into javascript but this's
+                        class not
+                        acctually class but js engine working with this's class as a function.
+                </div>
+
+                <div class="notes">
+                    - all previous properites and methods are a members , but we having a different type of methods
+                    and properites called static , <br>
+                    <br>
+                    - static : will be shared with all objects and can call by the class name;
+                    <br>
+                    - note: we can making class as a static class in this's case we will not making an object inside
+                    this's class but we will used the metod and parameter in thi's class will be accessed by class
+                    name lik usin <code>Math</code> class in javaScript.
+                    <br>
+                    - we can use <code>this</code> keyword to aadding static method inside member method or inside
+                    static method.
+                    <br>
+                    - when i having aapstracted method this's means i should implement this's method in inherited class or this's will changed the class into abstracted class, this's becouse we thinking about the class which having an abstract method as abstract class.
+                    <br>
+                    - when we having abstracted class this's means you can't making an object of this's class. 
+                    <br>
+                    - if we having abstracted class in this's case the abstracted class is still avilable to making object of this's class, and for solving this's problem we should adding <code>new.target == [abstract class name]</code> and check if this's target equall the abstract class or not if condition true in this's case i will thow error, this's condition will added in constructor of the abstract class.
+                    <br>
+                    - <b>Saled Class :</b> is a class can taking an object of it, but cant inherit of it (the opposit of abstract)- this's one by making condition in opposite way of abstraction condition like this <code>new.target !== [Saled class name]</code> and check if this's target is not equall the Saled class or not, if condition true in this's case i will thow error, this's condition will added in constructor of the Saled class.
+                </div>
+            </div>
+        </dl>
+    </article>
+    <script src="./js/Employee.js"></script>
+
+    <script src="./js/Person.js"></script>
+
+    <script src="./js/Point3D.js"></script>
+    <script src="./js/Line.js"></script>
+    <script src="./js/Shape.js"></script>
+
+    <script src="./js/Rectangle.js"></script>
+    <script src="./js/Circle.js"></script>
+
+    <script src="./js/script.js"></script>
+    <script>
+        // calling intializingShapeObjects function to intialize Circle, and Line Rectangle.
+        intializingShapeObjects();
+    </script>
+</body>
+
+</html>

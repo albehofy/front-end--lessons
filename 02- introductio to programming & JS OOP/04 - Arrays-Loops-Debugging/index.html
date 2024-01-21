@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays, loops, and debugging</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <article>
+        <h1>arrays, loops, and debugging</h1>
+        <dl>
+            <dt>array</dt>
+            <dd>used to reserved a block of location in memory, any array have a length which is denoted on the size of
+                the reserved places number, array access this's places by using index , and array is a zero indexed.
+                <br>
+                <h2>creating array</h2>
+                <p>intializing arrشy : <code>let arrayName = [];</code> <br>
+                    adding data into the array : <code>arrayName[index]</code> = "value";
+                </p>
+                <pre>Example 
+    <code>let info</code> = [] <code>;</code>
+    <code>info[0]</code> = "john"<code>;</code>
+    <code>info[1]</code> = 25<code>;</code>
+    <code>info[2]</code> = "Gradeuated"<code>;</code>
+    <code>info[3]</code> = "harvard"<code>;</code>
+
+    Two Dimensional array
+    <code>let employes</code> = [] <code>;</code>
+    <code>info[0]</code> = ["Ali", 26,"front-end", 12000, true]<code>;</code>
+    <code>info[1]</code> = ["sara", 24,"back-end", 11000, true]<code>;</code>
+    <code>info[2]</code> = ["john", 27,"tester", 9000, false]<code>;</code>
+    For accessing two dimenssional array we used <code>[index for parent][index for nested]</code>
+                </pre>
+                one of the differnces between arrays in js and in other programming language in array was created
+                without determined the length of array in js (array in js is dynamic), and also in js array is mixed
+                data type.
+            </dd>
+            <dt>loops</dt>
+            <dd>
+                used for making block of code for (n) times, js containg many of loops like:
+                <ul>
+                    <li><code>for</code> : looping through block of code for known number of time and known condition
+                        <pre>Example: 
+     <code>for</code> (<code>let i</code> = 0<code>;</code> <code>i</code> &lt; number of loops <code>i++</code>) {
+        body of the loop
+    }
+                        </pre>
+                    </li>
+                    <li><code>while</code>: looping through blcok of code if the number of iteration is unknown, but i
+                        know when i will stop so that while working with a conditio, and <code>while</code> will still
+                        working while condition still true.
+                        <pre>Example: 
+    <code>while</code> (<code>condition</code>) {
+        body of the loop
+    }</pre>
+                    </li>
+                    <li><code>do... while</code>: like while but the diffrence is running the code for one time after
+                        checking
+                        condition.
+                        <pre>Example: 
+    <code>do</code> {
+        body of the loop
+    }<code> while </code>(<code>condition</code>)</pre>
+                    </li>
+                    <li><code>for... in</code>: like for but this used with the object to looping all porperites of the
+                        object
+                        <pre>Example
+    <code>for</code> ( properity <code> in </code> objectName) {
+        body of the loop
+    }</pre>
+                    </li>
+                </ul>
+                - when using loops it's not nessesary to making condition incremented by one, but this's is a counter we
+                can increment with any value or dercement by any value all of this's denoted on the problem and
+                algorithm of solution thi's problem, it's not iportant to start iteration with zero also it's denoted on
+                problem and solving algorithm.
+
+                <h2>stoping and breaking loops</h2>
+                <ul>
+                    <li><code>break</code>: used for stoping loop, but it's not recomended to use.</li>
+                    <li><code>continue</code>: used for skiping the iteration and start fro the next iteration</li>
+                </ul>
+                
+            </dd>
+            <dt>debugging</dt>
+            <dd>you should test your code all the time in js we used debugger to showing our code running line by line
+                by adding <code>debugger;</code>
+            </dd>
+            <div class="notes">
+                <h2>block scope vs local scope</h2>
+                block scope this's means the scope inside a function <br>
+                block scope this's means the scope in a [loop or condition]
+            </div>
+        </dl>
+    </article>
+</body>
+
+</html>

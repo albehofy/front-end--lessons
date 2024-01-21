@@ -1,0 +1,194 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+}
+
+ol,
+ul {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin: 0 initial;
+}
+
+body {
+	background-color: #000;
+	color: #fff;
+	font-family: cursive;
+	text-transform: capitalize;
+}
+
+h1 {
+	text-align: center;
+	padding: 7px 0;
+	text-decoration: underline;
+}
+
+article {
+	width: 99%;
+	max-width: 900px;
+	min-width: 250px;
+	padding: 7px 21px;
+	margin: 0px auto 7px;
+	border-radius: 7px;
+}
+
+.special-text--underline {
+	display: block;
+	text-decoration: underline;
+	margin-bottom: 7px;
+	font-size: 18px;
+}
+
+.m-left--4 {
+	margin-left: 1.4rem;
+}
+
+code {
+    display: inline-block;
+    color: yellow;
+    text-transform: initial;
+    word-break: break-all;
+}
+
+dl {
+	padding: 7px;
+	border: 5px groove #ddd;
+	border-radius: 7px;
+}
+
+dt {
+	padding-top: 21px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+dd {
+	padding: 7px 7px 7px 25px;
+	margin: 7px;
+	border: 1px solid #ddd;
+	border-radius: 7px;
+}
+
+.form-container {
+	display: flex;
+	justify-content: space-around;
+	padding: 14px;
+	/* flex-wrap: wrap; */
+}
+
+.method-get,
+.method-post {
+	margin: 14px auto;
+}
+
+form {
+	min-width: 290px;
+	padding: 21px 7px;
+	margin: 0 auto;
+	border: 1px solid #ddd;
+	font-size: 18px;
+}
+
+form input,
+form select,
+textarea {
+	display: block;
+	width: 90%;
+	min-width: 260px;
+	padding: 7px;
+	font-size: 18px;
+}
+
+h2,
+h3 {
+	text-align: center;
+}
+
+h3 {
+	margin: 0;
+	padding: 7px;
+	border: 1px solid #fff;
+}
+
+label,
+small {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+}
+
+input[type="reset"],
+input[type="submit"] {
+	display: block;
+	width: 90%;
+	padding: 7px 0;
+	margin: 7px auto;
+	min-width: none;
+	color: #fff;
+	background-color: #42a056;
+	border-color: transparent;
+	outline-color: transparent;
+	text-shadow: 0 0 0.5px #000;
+	cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline;
+	width: initial;
+	min-width: initial;
+	margin: initial;
+}
+
+textarea {
+	margin: auto auto 7px;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 7px;
+}
+
+.accept-conditon {
+	font-size: 14px;
+}
+
+fieldset {
+	border: 7px groove #ddd;
+	border-radius: 7px;
+}
+
+small {
+	padding: 14px 0;
+}
+
+footer a {
+	display: block;
+	padding: 7px;
+	color: #ffe6c8;
+	text-transform: initial;
+	word-break: break-all;
+}
+
+@media only screen and (max-width:700px) {
+	.form-container {
+		flex-wrap: wrap;
+	}
+
+	form {
+		margin: 0;
+	}
+
+	form input {
+		min-width: 270px;
+	}
+}

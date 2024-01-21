@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intorduction To CSS - CSS Selectors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Intorduction To CSS - CSS Selectors</h1>
+    <article>
+        <dl>
+            <dt class="special-text--underline"> Penfits of usingn CSS: </dt>
+            <dd>
+                <ul>
+                    <li>making the presentaion in seprated file inside the structure <br>
+                        CSS is a presentaion Layer , and HTML is structure Layer </li>
+                    <li>Manging Style at Large Sites</li>
+                    <li>Impoved Performance</li>
+                    <li>Decreased Production Work</li>
+                    <li>Rich Design and Layout</li>
+                </ul>
+            </dd>
+            <dt class="special-text--underline">CSS Versions: </dt>
+            <dd>
+                <ul>
+                    <li>CSS1</li>
+                    <li>CSS2 & CSS2.1</li>
+                    <li>CSS3</li>
+                </ul>
+            </dd>
+            <dt>CSS Type and Position</dt>
+            <dd>
+                <ul>
+                    <li>inline style : in this's way css will written in the tag inside style attribute</li>
+                    <li>internal style: in this's way css written css inside style tag insie the head tag</li>
+                    <li>external style: in this's way css written in serperated file, and linked with html file by link
+                        tag
+                        which written in rhe head tag</li>
+                </ul>
+                - we used compination of the 3 way when creating style for the website.
+            </dd>
+            <dt class="special-text--underline">How to Write css code : </dt>
+            <dd>
+                css contains :
+                <ol>
+                    <li>selector: denoted on the tag whch i want to style</li>
+                    <li>properties: the thing what i need to add to the element like [color - width -height - font-size
+                        -
+                        background-color - margin - etc...]</li>
+                    <li>value: the vale what the prograer want to added into the properity</li>
+                </ol>
+                <pre>
+
+    Example:
+
+    1- inline style 
+        <code>&lt;h1 style="color: red"&gt;&lt/h1&gt;</code>
+    2- internal style 
+        &lt;head&gt;
+                &lt;style&gt;
+                    div {
+                        <code>color:</code> red;
+                    }
+                &lt;/style&gt;
+        &lt;/head&gt;
+        3- external style 
+        html file 
+        &lt;head&gt;
+            &lt;link rel="stylesheet" href="style.css"&gt;
+        &lt;/head&gt;
+        css file : 
+        header, 
+        main, 
+        footer {
+            <code>width:</code> 90%; 
+            <code>padding:</code> 7px 0;
+            <code>height:</code> 100vh;
+            <code>color:</code> #ff0000; 
+            <code>background-color:</code> #ffffff; 
+        }
+            </pre>
+            </dd>
+            <dt class="special-text--underline">css style periority</dt>
+            <dd>the periority of styles is <br>
+                <code>style + !important (not recomended) > inline id style > internal id style > external id style > inline class style > internal class style > external class style > inline style > internal style > external style</code>
+            </dd>
+            <dt class="special-text--underline">selectors type</dt>
+            <dd>
+                we have many type of selectors in css
+                <ol>
+                    <li>universal selector <code>*</code>: used for selecting all (select every thing inside the page)
+                    </li>
+                    <li>type selector <code>tag-name</code>: used for selecting tag.</li>
+                    <li>attribute selector <br>
+                        <code>elemnt [ attribute || attribute='value' (for getting a specefic attribute)]</code>: used
+                        for selecting attribute <br>
+                        <code>element [attribute ~="value"]</code> : this means if the attribute containing value. <br>
+                        <code>element [attribute ^="value"]</code> : this means if the attribute start with value. <br>
+                        <code>element [attribute $="value"]</code> : this means if the attribute end with value. <br>
+                    </li>
+                    <li>ID selector <code>#id-value</code>: used for selecting element wich including selected ID.</li>
+                    <li>> selector <code>element > child</code>: used for selecting direct child of the element.</li>
+                    <li>space selector <code>element  child</code>: used for selecting child of the element.</li>
+                    <li>+ selector <code>element + sibling</code>: used for selecting direct sibling of the element.</li>
+                    <li>~ selector <code>element ~ sibling</code>: used for selecting sibling elements of the element.</li>
+                </ol>
+                <br>
+                pesudo classes
+                <br>
+                [
+                <code>:hover</code>, 
+                <code>:visited</code>, 
+                <code>:active</code>, 
+                <code>:valid</code>, 
+                <code>:focus</code>, 
+                <code>:invlid</code>, 
+                <code>:link</code>, etc...
+                ]<br>
+                pesudo element
+                <br>
+                [
+                <code>::before</code>, 
+                <code>::after</code>, 
+                ]
+                <br>
+                <p class="note">
+                    pesudo element working with the elements which having content only
+                    <span class="header"></span>
+                </p>
+                <p class="note">
+                    <span class="header">css inheritance</span>
+                    every chield in structure will tking parent style, but not all rules will be inherited
+                    every every element inherited most of parent style this's clled <code>css inheritance</code>
+                </p>
+            </dd>
+            <dt class="special-text--underline">Css measurement unit</dt>
+            <dd>
+                <ul>
+                    <li>physical measurement [inch (in) - point (pt)]</li>
+                    <li>screen  measurement [pixel (px)]</li>
+                    <li>relative measurement [percentage (%) - (1em = 12pt = 16px = 100%)] (recomended)</li>
+                </ul>
+            </dd>
+            <dt class="special-text--underline">css properties</dt>
+            <dd>
+                <h4 class="special-text--underline">fonts properties</h4>
+                <code>font-size, font-family, font-weight, font-style, text-decoration, text-transform</code> <br>
+                <h4 class="special-text--underline">css box model</h4>
+                <code>padding, margin, border-width, border-style, border-color, border: width style color;</code> <br>                
+                <h4 class="special-text--underline">background</h4>
+                <code>background-color, background-image, background-position,background-repeat- background-attachment, background-clip,background-repeat-x, background-repeat-y, background: as a short hand value.</code> <br>
+                <h4 class="special-text--underline">position</h4>
+                <code>static (in the normal place in the structure and this's position don't have a top or left), relative ([relative to it's normal position] - top, and left => from the place of the element), absolut ([relative to first parent having a position] - top, and left => from the parent ), fixed (top, and left => from the page)</code><br>
+                all this's attribute working with other attributes <code>[left, top, rihgt, bottom]</code><br>
+                <h4 class="special-text--underline">display</h4>
+                <code>inline, block,flex, grid, inline-block, inline-flex, none, hiddn.</code> <br>
+                <h4 class="special-text--underline">float</h4>
+                <code>left(this's means the element will start from the left as possible) , rihgt.</code> we should adding clear both after using float<br>
+
+            </dd>
+        </dl>
+    </article>
+</body>
+
+</html>

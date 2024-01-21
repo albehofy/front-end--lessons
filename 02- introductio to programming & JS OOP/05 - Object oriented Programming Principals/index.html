@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object oriented Programming Principals</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <article>
+        <h1>Object oriented Programming Principals</h1>
+        <dl>
+            <dt>Programming language Paradigm</dt>
+            <dd>the way to comparing or spliting the programming languages, in this's technec we have 3 types of
+                programming language:
+                <ul>
+                    <li>procedural or imperative programing: in some cases called structural programming, it's the
+                        oldest way to writing programming for example <code>C lnguage</code>, and the main things of
+                        this Paradigm is writing code as a seprted fiels every file contin a function for solving
+                        specific problem, the main problem in this way <br> we have a defult in adding new function and
+                        modifing old functiond.</li>
+                    <li>object oriented programing: the most common way to writting programming Paradigm, the nearst wy
+                        to thinking as world and every thing in this's Paradigm like the real world, code will seprated
+                        into an object and every objet contain functions, properites, and variables; <code>OOP</code>
+                        more secure and also making it's easy to adding new featur and modifing. </li>
+                    <li>functional programing: it's no confflict btween functional and objet oriented programming, we
+                        have littel language programming completly functional programming, but in many cases we can
+                        working with functional and object oriented programming, <code>functional programming</code>: to
+                        make the thinking of the object less than the thinking of the the functional, also javascript
+                        having many parts as a functional programming </li>
+                </ul>
+                <h2>object Oriented Programming</h2>
+                <p>is programing programming focus on the object and data of this's object, this's object having a
+                    relation bteween each others and the main relation is an <code>inheritance</code>, and object also
+                    interacted with each others and the main iteraction is <code>Composition</code></coe>
+                </p>
+            </dd>
+            <dt>object oriented Principals</dt>
+            <dd>if this's Principals founded in programing language in this's case we can say this's is a object
+                oriented programming language
+                <h3>Main Principals</h3>
+                <ul>
+                    <li>Abstraction: represent the essential teature without representing the backgrond details 'using
+                        some thing without konwing the how this's thing created' (focus on what the object does inested
+                        of knowing how the object dose)
+                        <br>
+                        -abstraction will split the persons whose working on the development proccessing into two level
+                        <ul>
+                            <li><code>system architect</code>: the person who design the system classes and impelements
+                                this classes with the system required.</li>
+                            <li><code>developer</code>: the person who working on the functionl on the system and used
+                                the classes which designed with architect without knowing the details of how this's
+                                classes designed or how this's classes impelements.</li>
+                        </ul>
+                        example of using Abstraction in <code>js</code> like : [
+                        <code>alert, console, document, window, etc...</code> ]
+                        <br>
+                        <code>Explanation </code> in this's case js developers designed and impelements this's classes
+                        and adding methods, and the developer will working with this's classes wihout thinking how
+                        this's classes designed
+                        <br>
+
+                    </li>
+                    <li>Encapsulation: wrapping up data members and methods together intp a singel unit, usualy the
+                        things which is used Encapsulation called a class but it's not ture all the time, the things
+                        which is Encapsilated into the class is a (methods, variables),in this's casae wwe will explain
+                        how to thinking as a Encapsulation we have a car this's car will designed by architecture and
+                        will adding properites for this's car like [color, max spped ] nd also will adding methods like
+                        [start, stop, drive]
+                        <br>
+                        <code>Explanation </code> in this's case javascript developer designed object to contain a
+                        methods and properites related with this's object <br> for more explaining we having
+                        <code>document</code> object this's object contains a properites like
+                        <code>[bgColor, fgColor, title]</code> and also includes methods (actions) like
+                        <code> [write, getElementByID, querySelector] </code>
+                        <br>
+                        <code>Explanation</code> in <code>document</code> we adding all methods and properites in
+                        document which means this's things encapsulate in <code>document</code> object, and the
+                        developer will accessing the properites and methods which included in <code>document</code>
+                        object in easy way, like using method write by writting: <code>document.write("hello")</code>.
+                    </li>
+
+                    <li>Ennheritance: including <code>property</code> of a <code>class</code> into anonther <code>class</code>, which is making an <code>object</code> this's object is more reusable, this's means when we having a similar property and this's <code>properity</code> will used in more than <code>class</code> in this's case we will making a parent <code>class</code> and making child nesting this's <code>proprety</code> from the parent, <br> 
+                        for example when creating <code>classes</code> for [<code>Employee</code>, <code>Child</code>, <code>Student</code> ] all this's <code>classes</code> having some of similar <code>property</code> like [<code>name</code>, <code>color</code>, <code>language</code>, etc.....] we can making a parent called [<code>Person class</code>] this's <code>class</code> includes all this's <code>properites</code> and this's <code>classes</code> will inherit this's <code>methods</code>, this will making my code more reusable and also this's helping in making cleaning code also in this case the modification is more easy becouse the edit will be in the parent <code>class</code> then all child will edit automatically,  <br>
+                         another example we having a [ <code>Cat class</code>, <code>Dog class</code>, <code>Cow class</code>, <code>Monky class</code>] , all this's classes having  related <code>proprety</code> and also having a related <code>methods</code> so that we can creating a parent <code>class</code> called [<code>Animal class</code>] and all child <code>classes</code> will inheriting this's <code>proprety</code> and <code>methods</code> from the parent and we can adding for every <code>class</code> his own <code>methods</code> and his own <code>properites</code> too.</li>
+                    <li>Polymorphism: means "many forms", and it occurs when we have many <code>classes</code> that are related to each other by inheritance,or we can say <b>Polymorphism</b>: is the ability (in programming) to present the same interface for differing underlying forms (data types)., for explanation the Polymorphism means we having a function and this's function will used in many places with diffrent output <br>
+                        for example we having a <code>function</code> called <code>drive</code> this's <code>function</code> will used by [<code>Car</code> - <code>Train</code> - <code>Airplane</code>  - <code>motor</code> ] all this's <code>classes</code> will used <code>drive method</code> but this's <code>methods</code> will excutes with different output, <br>
+                        anothere example for explanation we having <code>class Person</code> include <code>method</code> called <code>Print</code> this's method will excutes in [<code>Employee</code>, <code>Student</code>, <code>Proffessor</code> ] when excuting <code>print</code> inside <code>Employee</code> this's will print <code>employee name</code> <code>employee salary</code> <code>employee age</code> also when excuting the same <code>function</code> inside Student this's will print code>Employee</code> this's will print <code>Student Name</code> <code>Student Degree</code> <code>Student Level</code> <br> finally when excuting this's <code>funtion</code> inside the Proffessor in this's case we will print  <code>Proffessor salary</code> , <code>Proffessor Degree</code>, <code>Proffessor certefications</code>
+                        <br>
+                        finally we can summary this's defenations by saying Polymorphism is a one <code>function</code> inside the parent but this <code>function</code> will overwrited or overloaded in all objects to outputing diffrent values
+                    </li>
+                </ul>
+                - when saying this's language supported object oriented this's means this's language supported the main Principals [Abstractions, Encapsulation, Inheritance, Polymorphism ]
+                - also remember that the <code>object</code> is a blue print of the <code>class</code>
+            </dd>
+
+        </dl>
+    </article>
+    <script src="./script.js"></script>
+</body>
+
+</html>
