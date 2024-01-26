@@ -2,7 +2,7 @@
 >**regEx:** used to make validate on string by using pattern.
 
 ## regular expression in js 
-regular expression split into two parta  `pattern` + `flag`, 
+regular expression split into two parts  `pattern` + `flag`, 
 ### ways of making **regEx** 
 - implicite way `var regEx= /pattern flag[i, g, m]/`==>> `var regex= /j.*t/igm`
 - explicite way `var regEx= new RegExp(pattern ,flag)` ==>> `var regex= new RegExp("j.t*", "i") `
@@ -20,9 +20,9 @@ regular expression split into two parta  `pattern` + `flag`,
 - `{}` range 'number of charcacters '
 - `[]` range of character
 - `()` group
-- `i` ignore case senstive
-- `g` global
-- `m` multi lines
+- `i` ignore case senstive **-- flag**
+- `g` global **-- flag**
+- `m` multi lines **-- flag**
 - `\s` space
 - `+` at least one
 - `*` zero or more
