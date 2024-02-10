@@ -51,21 +51,21 @@ before html5 playing media is depending on the plugins in the user devide but th
     <source src="audio.ogg" type="audio/ogg"></source>
 </audio>
 ``` 
-## localstorage
+## Localstorage
 More secure than cookies and hold data more than cookies
-### localstorage methods
+### Localstorage methods
  - `setItem('prop', 'value')` adding new item to the localstorage.
  - `getItem('prop')` return json
- ## localstorage
+ ## Sessionstorage
 More secure than cookies and hold data more than cookies
-### sessionStorage methods
+### Sessionstorage methods
 this's data will removed when browser closed, and 
 > **Note:** 
  The main deffrance between sessionStorage and variable when reloading page the variable value will be reseted but sessionStorage will saved it's value
  - `setItem('prop', 'value')` adding new item to the localstorage.
  - `getItem('prop')` return json
 
- ## data attribute
+ ## Data attribute
  this's fature added in html5 to allow adding new attribute but should start with `data-name` this's attribute are used in `javaScript`, this's attr is selected in js by `element.getAttribute();`, and we should handel it by `element.setAttribute('attr','value')`.
  >**Example**
  ```
