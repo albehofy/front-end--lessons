@@ -161,3 +161,14 @@ this's data will removed when browser closed, and
     </script>
 </html>
  ```
+
+## Geolocation Object
+for selecting user location this's object inside navigator object 
+>**Example**
+```
+var url; 
+navigator.geolocation.getCurrentPosition(position=>{
+    url = "http://maps.google.com/maps?q=" + position.coords.latitude + ",+"+ position.coords.longitude;
+    console.log(url)
+})
+```

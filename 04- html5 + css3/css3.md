@@ -70,3 +70,38 @@ column-count: number; //column-count: 3;
 column-gap: number(px,%,em,rem); //colimn-gap: 12px;
 column-rule: style size color //column-rule: 1px solid #00F
 ```
+- flex: added into the parent not item itself
+    - direction
+        - row 
+        - row-reverse
+        - column
+        - column-reverse
+    - wrap
+        - wrap
+        - wrap-reverse
+        - no-wrap
+    - justify-content
+        - flex-start
+        - flex-end
+        - center
+        - space-between
+        - space-around
+        - space-evenly
+    - align-items
+        - flex-start
+        - flex-end
+        - center
+        - stretch
+        - baseline
+    - align-content
+        - flex-start
+        - flex-end
+        - center
+        - stretch
+        - space-between
+        - space-around
+    - order
+    - grow
+    - shrink
+    - basis
+    - align-self
