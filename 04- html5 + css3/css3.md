@@ -188,3 +188,22 @@ column-rule: style size color //column-rule: 1px solid #00F
 - Column Shifter
 - Off Canvas
 
+### Media Queries
+adding speciefic style on the screen when this's media contains condetion
+- `media (condition) {css}`
+- media types
+    - all 
+    - print
+    - screen
+    - speech
+- media feature
+    - max-width
+    - min-width
+    - max-height
+    - min-height
+    - orientaion
+ - break points
+    - from 0 to 480px
+    - from 481px to 768px
+    - from 769px to 1279px
+    - 1280px or any device larger than this's size 
