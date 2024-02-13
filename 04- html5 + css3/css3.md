@@ -105,3 +105,105 @@ column-rule: style size color //column-rule: 1px solid #00F
     - shrink
     - basis
     - align-self
+- box-sizing
+    - border-box
+    - content-box (default)
+- grid : new design pattern for making layouts, devided page into 12 column, and adding width for the content as a column 
+>**Example**
+```
+<!-- css -->
+.row:after {
+    content: ""; 
+    clear: both; 
+}
+.col-1 {
+    width: 8.33%; 
+    float: left; 
+}
+
+.col-2 {
+    width: 16.66%; 
+    float: left; 
+}
+.col-3 {
+    width: 24.99%; 
+    float: left; 
+}
+
+.col-4 {
+    width: 33.32%; 
+    float: left; 
+}
+
+.col-5 {
+    width: 41.65%; 
+    float: left; 
+}
+.col-6{
+    width: 49.98%; 
+    float: left; 
+}
+
+.col-7 {
+    width: 58.31%; 
+    float: left; 
+}
+
+.col-8 {
+    width: 66.64%; 
+    float: left; 
+}
+
+.col-9 {
+    width: 74.97%; 
+    float: left; 
+}
+
+.col-10 {
+    width: 83.3%; 
+    float: left; 
+}
+
+.col-11 {
+    width: 91.63%; 
+    float: left; 
+}
+
+.col-12 {
+    width: 100%; 
+    float: left; 
+}
+
+<!-- html -->
+<h1>Grid based system</h1>
+<div class="row">
+    <div class="col-3"> col-3</div>
+    <div class="col-6">col-6</div>
+    <div class="col-3"> col-3</div>
+</div>
+```
+### Responsive Design Pattern 
+- Mostly Fluid
+- Column Drop
+- Column Shifter
+- Off Canvas
+
+### Media Queries
+adding speciefic style on the screen when this's media contains condetion
+- `media (condition) {css}`
+- media types
+    - all 
+    - print
+    - screen
+    - speech
+- media feature
+    - max-width
+    - min-width
+    - max-height
+    - min-height
+    - orientaion
+ - break points
+    - from 0 to 480px
+    - from 481px to 768px
+    - from 769px to 1279px
+    - 1280px or any device larger than this's size
