@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dragg and Drop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-size: 18px;
+        }
+
+        h1 {
+            width: 75%;
+            margin: 14px auto;
+            padding: 7px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            border-bottom: 3px solid #f00;
+        }
+
+        .person--data {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 7px;
+            color: #f00;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: thin;
+            text-transform: capitalize;
+            line-height: 150%;
+        }
+
+        .person--data>div {
+            width: 25%;
+            min-width: 270px;
+            padding: 7px 21px;
+            margin: 14px auto;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            box-shadow: 0px 1px 3px #eee;
+        }
+
+        .person--header {
+            margin: 21px auto;
+        }
+
+        .name,
+        .age,
+        .address {
+            color: #333;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Advanced javaScript</h1>
+    <div class="person--data"></div>
+</body>
+<script>
+    let personData = document.querySelector('.person--data');
+    function Person(name = 'mohamed', age = 25) {
+        var ID = 1;
+        this.name = name;
+        this.age = age;
+        function setID() {
+
+        }
+        this.setID = function (_id) {
+            ID = _id;
+        }
+        this.showID = function () {
+            return ID;
+        }
+
+        this.addingNewPerson = function () {
+            return `
+            <div>
+                <h2 class='person--header'>Person ${ID}</h2>
+                <span class="name">Person name:  </span> ${this.name},  <br> 
+                <span class="age">person age:  </span>${this.age}, <br>
+                <span class="address">Person Address:  </span> ${this.address}
+            </div>`
+        }
+    }
+    var p1 = new Person();
+    p1.setID(1)
+    Person.prototype.address = "etai el-baroud";
+    personData.innerHTML = p1.addingNewPerson();
+    var p2 = new Person("ahmed", 27);
+    p2.address = "cairo"
+    p2.setID(2)
+    personData.innerHTML += p2.addingNewPerson();
+    var p3 = new Person("mohy-aldein", 27);
+    p3.address = "qena"
+    p3.setID(3)
+    personData.innerHTML += p3.addingNewPerson()
+    var Student = function (track) {
+        this.track = track;
+    }
+    Student.prototype = new Person();
+    Student.prototype.addingNewPerson = function () {
+        return `
+            <div>
+                <h2 class='person--header'>Student ${this.ID}</h2>
+                <span class="name">Person name:  </span> ${this.name},  <br> 
+                <span class="age">person age:  </span>${this.track}, <br>
+                <span class="age">person age:  </span>${this.age}, <br>
+                <span class="address">Person Address:  </span> ${this.address}
+            </div>`
+    }
+    var s1 = new Student("CS");
+    s1.ID = 4;
+    personData.innerHTML += s1.addingNewPerson()
+</script>
+
+</html>
